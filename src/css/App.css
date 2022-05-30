@@ -1,0 +1,10 @@
+@import "dashboard.css";
+@import "carddetails.css";
+@import "map.css";
+@import "cardlist.css";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}

@@ -1,0 +1,26 @@
+.card-details {
+  border-radius: 12px;
+  background-color: #101010;
+  padding: 29px 40px;
+  margin: 0 0 20px 0;
+}
+
+.ride-stats ul {
+  text-decoration: none;
+  list-style: none;
+}
+.ride-stats ul li {
+  padding-top: 5px;
+}
+
+.city-flex ul{
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  list-style: none;
+}
+
+.city-flex ul li{
+  margin: 0 10px;
+  background-color: black;
+}
