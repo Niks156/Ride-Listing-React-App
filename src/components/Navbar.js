@@ -11,13 +11,13 @@ import axios from "axios";
 
 const Navbar = () => {
   const [name, setname] = useState("");
-  const [scode, setscode] = useState("");
+  // const [scode, setscode] = useState("");
   const [url, seturl] = useState("");
   useEffect(() => {
     axios.get("https://assessment.api.vweb.app/user").then((response) => {
       const user = response.data;
       setname(user.name);
-      setscode(user.station_code);
+      // setscode(user.station_code);
       seturl(user.url);
     });
   }, []);

@@ -13,7 +13,7 @@ export default function CardDetails(props) {
         <Grid item xs={3} sx={{ marginLeft: 0 }}>
           <img
             src={require("../img/map.png")}
-            alt="image"
+            alt="map"
             width="296px"
             height="148px"
           ></img>
