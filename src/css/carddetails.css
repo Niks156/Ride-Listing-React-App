@@ -5,6 +5,11 @@
   margin: 0 0 20px 0;
 }
 
+.card-details img {
+  width: 296px;
+  height: 148px;
+}
+
 .ride-stats ul {
   text-decoration: none;
   list-style: none;
@@ -13,14 +18,34 @@
   padding-top: 5px;
 }
 
-.city-flex ul{
+.city-flex ul {
   display: flex;
   flex-direction: row;
   text-decoration: none;
   list-style: none;
 }
 
-.city-flex ul li{
+.city-flex ul li {
   margin: 0 10px;
   background-color: black;
+}
+
+/* Media Queries */
+@media only screen and (min-width:0px) and (max-width:480px) {
+  .card-details {
+    overflow: hidden;
+  }
+  .card-details img {
+    width: 273px;
+    height: 170px;
+    margin-top: 15px;
+  }
+  .ride-stats {
+    margin-top: 10px;
+  }
+  .city-flex ul li {
+    margin: 0;
+    margin-top: 7px;
+    padding-right: 9px;
+  }
 }

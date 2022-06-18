@@ -10,15 +10,13 @@ export default function CardDetails(props) {
   return (
     <>
       <Grid container className="card-details">
-        <Grid item xs={3} sx={{ marginLeft: 0 }}>
+        <Grid item xs={12} sm={6} md={3} sx={{ marginLeft: 0 }}>
           <img
             src={require("../img/map.png")}
             alt="map"
-            width="296px"
-            height="148px"
           ></img>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={3.5} md={6}>
           <div className="ride-stats">
             <ul>
               <li>Ride id : {id}</li>
@@ -29,7 +27,7 @@ export default function CardDetails(props) {
             </ul>
           </div>
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={3} sm={2.5} md={3}>
           <div className="city-flex">
             <ul>
               <li>{state}</li>

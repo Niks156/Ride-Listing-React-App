@@ -13,6 +13,23 @@ const Navbar = () => {
   const [name, setname] = useState("");
   // const [scode, setscode] = useState("");
   const [url, seturl] = useState("");
+  const styles = {
+    title: {
+      mr: 2,
+      flexGrow: 1,
+      marginLeft: "9px",
+      display: { xs: "flex", md: "flex" },
+      color: "inherit",
+      textDecoration: "none",
+    },
+    username: {
+      flexGrow: 0,
+      marginRight: "10px",
+      display: { xs: "flex", md: "flex" },
+    },
+    avatar: { flexGrow: 0, marginRight: "15px" },
+  };
+
   useEffect(() => {
     axios.get("https://assessment.api.vweb.app/user").then((response) => {
       const user = response.data;
@@ -21,32 +38,21 @@ const Navbar = () => {
       seturl(user.url);
     });
   }, []);
+
   return (
     <AppBar sx={{ bgcolor: "#101010" }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h5"
-            noWrap
-            component="h5"
-            sx={{
-              mr: 2,
-              flexGrow: 1,
-              marginLeft: "9px",
-              display: { xs: "none", md: "flex" },
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
+          <Typography variant="h5" noWrap component="h5" className="title" sx={styles.title}>
             Edvora
           </Typography>
 
-          <Box sx={{ flexGrow: 0, marginRight: "10px", display: { xs: "none", md: "flex" } }}>
+          <Box sx={styles.username}>
             {name}
             {/* displays the avatar at right */}
           </Box>
 
-          <Box sx={{ flexGrow: 0, marginRight: "15px" }}>
+          <Box sx={styles.avatar}>
             <Tooltip title="Open settings">
               <IconButton sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src={url} />
