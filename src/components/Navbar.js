@@ -44,7 +44,7 @@ const Navbar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography variant="h5" noWrap component="h5" className="title" sx={styles.title}>
-            Edvora
+            RideList
           </Typography>
 
           <Box sx={styles.username}>
