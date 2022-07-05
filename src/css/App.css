@@ -17,5 +17,8 @@
 
 .dashboard {
   height: 100%;
+  overflow: hidden;
   background-color: #292929;
+  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
 }

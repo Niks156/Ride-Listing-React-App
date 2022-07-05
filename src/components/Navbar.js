@@ -17,7 +17,7 @@ const Navbar = () => {
     title: {
       mr: 2,
       flexGrow: 1,
-      marginLeft: "9px",
+      marginLeft: "23px",
       display: { xs: "flex", md: "flex" },
       color: "inherit",
       textDecoration: "none",
@@ -26,6 +26,8 @@ const Navbar = () => {
       flexGrow: 0,
       marginRight: "10px",
       display: { xs: "flex", md: "flex" },
+      fontFamily: "'Inter', sans-serif",
+      fontWeight: "bold",
     },
     avatar: { flexGrow: 0, marginRight: "15px" },
   };
@@ -43,7 +45,12 @@ const Navbar = () => {
     <AppBar sx={{ bgcolor: "#101010" }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography variant="h5" noWrap component="h5" className="title" sx={styles.title}>
+          <Typography
+            variant="h5"
+            noWrap
+            className="title"
+            sx={styles.title}
+          >
             RideList
           </Typography>
 
@@ -53,7 +60,7 @@ const Navbar = () => {
           </Box>
 
           <Box sx={styles.avatar}>
-            <Tooltip title="Open settings">
+            <Tooltip title="Avatar">
               <IconButton sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src={url} />
               </IconButton>
