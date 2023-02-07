@@ -1,18 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import IconButton from "@mui/material/IconButton";
 import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
-import axios from "axios";
+import { user } from "../Data";
 
 const Navbar = () => {
-  const [name, setname] = useState("");
-  // const [scode, setscode] = useState("");
-  const [url, seturl] = useState("");
   const styles = {
     title: {
       mr: 2,
@@ -32,37 +29,21 @@ const Navbar = () => {
     avatar: { flexGrow: 0, marginRight: "15px" },
   };
 
-  useEffect(() => {
-    axios.get("https://assessment.api.vweb.app/user").then((response) => {
-      const user = response.data;
-      setname(user.name);
-      // setscode(user.station_code);
-      seturl(user.url);
-    });
-  }, []);
-
   return (
     <AppBar sx={{ bgcolor: "#101010" }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h5"
-            noWrap
-            className="title"
-            sx={styles.title}
-          >
+          <Typography variant="h5" noWrap className="title" sx={styles.title}>
             RideList
           </Typography>
-
           <Box sx={styles.username}>
-            {name}
+            {user.name}
             {/* displays the avatar at right */}
           </Box>
-
           <Box sx={styles.avatar}>
             <Tooltip title="Avatar">
               <IconButton sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src={url} />
+                <Avatar alt="Remy Sharp" src={require("../img/avatar.png")} />
               </IconButton>
             </Tooltip>
           </Box>
